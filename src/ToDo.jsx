@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ToDo = ({ todo }) => {
+const ToDo = ({ todo, index }) => {
   return (
     <div className="todo">
       {todo.text}
