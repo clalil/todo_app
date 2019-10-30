@@ -5,13 +5,13 @@ const ToDoForm = ({ addToDo }) => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    if(!value) return;
+    if (!value) return
     addToDo(value)
     setValue('')
   }
   return (
     <div>
-      <form onClick={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="text" className="input" value={value} onChange={e => setValue(e.target.value)} />
       </form>
     </div>

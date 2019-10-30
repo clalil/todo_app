@@ -11,13 +11,18 @@ const App = () => {
     }
   ])
 
+  const addToDo = (text) => {
+    const newToDo = [...todo, { text }]
+    setTodo(newToDo)
+  }
+
   return (
     <div className="todo-app">
       <div className="todo-list">
       {todo.map((todo, index) => (
         <ToDo key={index} index={index} todo={todo} />
       ))}
-      <ToDoForm />
+      <ToDoForm addToDo={addToDo}/>
       </div>
     </div>
   )
