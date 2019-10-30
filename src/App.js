@@ -22,6 +22,12 @@ const App = () => {
     setTodo(newToDo)
   }
 
+  const removeToDo = (index) => {
+    const newToDo = [...todo]
+    newToDo.splice(index, 1)
+    setTodo(newToDo)
+  }
+
   return (
     <div className="todo-app">
       <div className="todo-list">
@@ -30,7 +36,8 @@ const App = () => {
         key={index} 
         index={index} 
         todo={todo} 
-        completeToDo={completeToDo}/>
+        completeToDo={completeToDo}
+        removeToDo={removeToDo}/>
       ))}
       <ToDoForm addToDo={addToDo}/>
       </div>
