@@ -16,11 +16,21 @@ const App = () => {
     setTodo(newToDo)
   }
 
+  const completeToDo = (index) => {
+    const newToDo = [...todo]
+    newToDo[index].isCompleted = true
+    setTodo(newToDo)
+  }
+
   return (
     <div className="todo-app">
       <div className="todo-list">
       {todo.map((todo, index) => (
-        <ToDo key={index} index={index} todo={todo} />
+        <ToDo 
+        key={index} 
+        index={index} 
+        todo={todo} 
+        completeToDo={completeToDo}/>
       ))}
       <ToDoForm addToDo={addToDo}/>
       </div>
