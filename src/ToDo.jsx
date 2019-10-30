@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const ToDo = () => {
+const ToDo = ({ todo }) => {
   return (
-    <div>
-      
+    <div className="todo">
+      {todo.text}
     </div>
   )
 }
