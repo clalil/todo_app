@@ -31,15 +31,15 @@ const App = () => {
   return (
     <div className="todo-app">
       <div className="todo-list">
-      {todo.map((todo, index) => (
-        <ToDo 
-        key={index} 
-        index={index} 
-        todo={todo} 
-        completeToDo={completeToDo}
-        removeToDo={removeToDo}/>
-      ))}
-      <ToDoForm addToDo={addToDo}/>
+        {todo.map((todo, index) => (
+          <ToDo
+            key={index}
+            index={index}
+            todo={todo}
+            completeToDo={completeToDo}
+            removeToDo={removeToDo} />
+        ))}
+        <ToDoForm addToDo={addToDo} />
       </div>
     </div>
   )
